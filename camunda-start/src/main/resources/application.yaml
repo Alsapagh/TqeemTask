@@ -1,0 +1,26 @@
+# Camunda configuration
+camunda:
+  bpm:
+    history-level: full
+    database:
+      schema-update: true
+
+# Database configuration
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password: password
+    driver-class-name: org.h2.Driver
+
+# Server configuration
+server:
+  port: 8080
+
+# Logging configuration
+logging:
+  level:
+    org:
+      springframework: DEBUG
+      camunda:
+        bpm: DEBUG
